@@ -1,2 +1,41 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="jumbotron">
+    <h1>OK Codebuddy</h1>
+</div>
+
+<div class="panel panel-default center">
+    <div class="panel-heading">
+        <p>Join the best free code buddy site on Earth.<br>
+        Start meeting people now!
+        </p>
+    </div>
+    <div class="panel-body">
+    <% if user_signed_in? %>
+        <%= link_to raw('<div class="btn btn-default">Edit account</div>'), edit_user_registration_path %>
+        <%= link_to raw('<div class="btn btn-primary">Logout</div>'), destroy_user_session_path, :method=>'delete' %>
+    <% else %>
+        <%= link_to raw('<div class="btn btn-default">Login</div>'), new_user_session_path %>
+        <%= link_to raw('<div class="btn btn-primary">Sign Up</div>'), new_user_registration_path %>
+    <% end %>
+
+    </div>
+</div>
+
+<!-- START CODEPEN -->
+<link href='http://fonts.googleapis.com/css?family=Noto+Serif|Open+Sans:300,600|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  
+<article class="content col-sm-12">
+  <div id="servicing">
+    <h1 >Find a coder with your interests!</h1>
+    <p>Whether you're hacking away at your own pet project or just trying to learn a new technology, it can be helpful to have a buddy right there by your side.</p>
+    
+    <p>Make friends, improve your github/resume, learn something new and create something great.</p>
+  </div>
+  
+  <div id="m-steps">
+    <div class="five-step"></div>
+    <div class="five-step"></div>
+    <div class="five-step"></div>
+    <div class="five-step"></div>
+    <div class="five-step"></div>
+  </div>
+</article>

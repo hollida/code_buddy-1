@@ -1,7 +1,9 @@
 <ul>
   <% @users.each do |user| %>
-    <li><%= user.first_name %><%= user.last_name %></li>
+    <% fullname = user.first_name+" "+user.last_name %>
+    <li><%= link_to fullname, user %></li>
     <li><%= user.interests %></li>
+    <li><%= user.status %></li>
     <li><%= user.email %></li>
   <% end %>
 </ul>

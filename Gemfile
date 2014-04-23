@@ -13,6 +13,7 @@ gem 'webrat'
 gem 'rails_layout'
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'mailboxer'
 
 group :doc do
   gem 'sdoc', require: false

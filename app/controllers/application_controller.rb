@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) << :first_name
     devise_parameter_sanitizer.for(:account_update) << :last_name
     devise_parameter_sanitizer.for(:account_update) << :interests
+    devise_parameter_sanitizer.for(:account_update) << :status
   end
   
   # Prevent CSRF attacks by raising an exception.
