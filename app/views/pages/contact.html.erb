@@ -1,2 +1,24 @@
 <h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<div class="jumbotron center">
+    <h1><small>Feel free to send your tips, praise, job offers, or naked photos of yourself to <a href="mailto:johnpc@umich.edu"> johnpc@umich.edu</a>, or contact me at (989)598-7705</small></h1>
+</div>
+
+<%= form_tag({controller: "pages", action: "contact"}, class: "form") %>
+
+<div class="row">
+<div class="col-xs-6 col-md-6 form-group">
+<input class="form-control" id="name" name="name" placeholder="Name" type="text" required autofocus />
+</div>
+<div class="col-xs-6 col-md-6 form-group">
+<input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
+</div>
+</div>
+<textarea class="form-control" id="message" name="msg" placeholder="Message" rows="5"></textarea>
+<br />
+<div class="row">
+<div class="col-xs-12 col-md-12 form-group">
+<button class="btn btn-primary pull-right" type="submit">Submit</button>
+
+</form>
+
+<p>If you'd like to contribute, find this project on <a href="https://github.com/johnpc/code_buddy">Github</a></p>

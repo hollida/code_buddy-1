@@ -9,6 +9,7 @@ CodeBuddy::Application.routes.draw do
   get 'users' => 'users#index'
   get "about" => "pages#about"
   get "contact" => "pages#contact"
+  post "contact" => "pages#contact"
   
   
   resources :conversations, only: [:index, :show, :new, :create] do
