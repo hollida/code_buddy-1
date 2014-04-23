@@ -15,6 +15,10 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'mailboxer'
 
+gem 'haml-rails'
+gem 'simple_form'
+gem 'protected_attributes'
+
 group :doc do
   gem 'sdoc', require: false
 end
