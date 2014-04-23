@@ -1,9 +1,15 @@
 <ul>
   <% @users.each do |user| %>
-    <% fullname = user.first_name+" "+user.last_name %>
-    <li><%= link_to fullname, user %></li>
-    <li><%= user.interests %></li>
-    <li><%= user.status %></li>
-    <li><%= user.email %></li>
+    <% if user.first_name != nil %>
+    <div class="user-tile">
+        <% fullname = user.first_name+" "+user.last_name %>
+        <li><%= link_to fullname, user %></li>
+        <li><%= user.interests %></li>
+        <li><%= user.status %></li>
+    <% else %>
+       <li><%= user.email %> has not filled out their profile yet</li>
+    <% end %>
+    </div>
+    <br>
   <% end %>
 </ul>
