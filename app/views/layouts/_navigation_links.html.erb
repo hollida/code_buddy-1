@@ -3,8 +3,8 @@
 <li><%= link_to 'Contact', contact_path %></li>
 <li><%= link_to 'See Who is Out There', users_path %></li>
 <% if user_signed_in? %>
-  <li><%= link_to 'messages', conversations_path %></li>
-  <li><%= link_to 'Edit account', edit_user_registration_path %></li>
+  <li><%= link_to 'Messages', conversations_path %></li>
+  <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
   <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
 <% else %>
   <li><%= link_to 'Login', new_user_session_path %></li>
