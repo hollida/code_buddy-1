@@ -23,7 +23,7 @@
         </div>
         <div class="panel-body">
         <% if user_signed_in? %>
-            <%= link_to raw('<div class="btn btn-default btn-lg">Edit account</div>'), edit_user_registration_path %>
+            <%= link_to raw('<div class="btn btn-default btn-lg">Update Profile</div>'), edit_user_registration_path %>
             <%= link_to raw('<div class="btn btn-primary btn-lg">Logout</div>'), destroy_user_session_path, :method=>'delete' %>
         <% else %>
             <%= link_to raw('<div class="btn btn-default btn-lg">Login</div>'), new_user_session_path %>
@@ -31,10 +31,13 @@
         <% end %>
         </div>
     </div>
-    
-    <div class="five-step"><i class="glyphicon glyphicon-wrench center"></i></div>
-    <div class="five-step"></div>
-    <div class="five-step"></div>
-    <div class="five-step"></div>
+    <% if current_user %>
+    <div class="five-step"><%= link_to raw('<i class="glyphicon glyphicon-wrench center"></i>'), edit_user_registration_path %></div>
+    <% else %>
+    <div class="five-step"><%= link_to raw('<i class="glyphicon glyphicon-wrench center"></i>'), new_user_registration_path %></div>
+    <% end %>
+    <div class="five-step"><%= link_to raw('<i class="glyphicon glyphicon-globe center"></i>'), users_path %></div>
+    <div class="five-step"><%= link_to raw('<i class="glyphicon glyphicon-envelope center"></i>'), contact_path %></div>
+    <div class="five-step"><%= link_to raw('<i class="glyphicon glyphicon-info-sign center"></i>'), about_path %></div>
   </div>
 </article>
