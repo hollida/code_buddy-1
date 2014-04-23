@@ -138,7 +138,7 @@ a {
 }
 #bike {
   float: right;
-  background: url('http://paul-howarth.net/biketest/images/bike.png');
+  background: url('');
   width: 640px;
   position: relative;
   background-repeat:no-repeat;
@@ -243,4 +243,7 @@ a {
   }
 .fade {
   display: none;
+}
+.panel{
+    height:100%;
 }
