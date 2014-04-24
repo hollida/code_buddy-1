@@ -1,15 +1,21 @@
-<ul>
   <% @users.each do |user| %>
     <% if user.first_name != nil %>
     <div class="user-tile">
+    <div class="panel panel-success">
+    <div class="panel-heading">
         <% fullname = user.first_name+" "+user.last_name %>
-        <li><%= link_to fullname, user %></li>
-        <li><%= user.interests %></li>
-        <li><%= user.status %></li>
+        <h2>Name: <%= link_to fullname+" (click to view profile)", user %></h2>
+
+    </div>
+    <div class="panel-body">
+        <p>Interested in: <%= user.interests %></p>
+        <p>Skill Level: <%= user.status %></p>
+    </div>
+    </div>
     <% else %>
        <li><%= user.email %> has not filled out their profile yet</li>
     <% end %>
+
     </div>
     <br>
   <% end %>
-</ul>
