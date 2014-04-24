@@ -18,6 +18,9 @@ gem 'haml-rails'
 gem 'simple_form'
 gem 'protected_attributes'
 
+gem 'omniauth-facebook'
+gem 'omniauth-github'
+
 group :doc do
   gem 'sdoc', require: false
 end

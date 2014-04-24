@@ -3,14 +3,13 @@ CodeBuddy::Application.routes.draw do
   get "conversations/index"
   get "conversations/new"
   get "conversations/show"
-  devise_for :users
   get 'users/:id' => 'users#show', as: :user
   root "pages#home"
   get 'users' => 'users#index'
   get "about" => "pages#about"
   get "contact" => "pages#contact"
   post "contact" => "pages#contact"
-  
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   
   resources :conversations, only: [:index, :show, :new, :create] do
     member do

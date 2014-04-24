@@ -24,6 +24,7 @@
             </h1>
         </div>
         <div class="panel-body">
+        <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
         <% if user_signed_in? %>
             <%= link_to raw('<div class="btn btn-default btn-lg col-xs-8 col-xs-offset-2">Update Profile</div>'), edit_user_registration_path %><br />
             <%= link_to raw('<div class="btn btn-primary btn-lg col-xs-8 col-xs-offset-2">Find a Buddy</div>'), users_path %>
