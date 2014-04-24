@@ -22,6 +22,8 @@
             <h1>Join the best free code buddy site on Earth.<br>
             <a href="/users">Start meeting people now!</a>
             </h1>
+            <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+
         </div>
         <div class="panel-body">
         <% if user_signed_in? %>
