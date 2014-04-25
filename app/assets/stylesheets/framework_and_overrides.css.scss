@@ -955,7 +955,6 @@ a {
   text-decoration: none;
 }
 .content {
-  height: 600px;
   margin: 20px auto;
   padding: 40px;
   background: $content-bg;
@@ -1073,6 +1072,7 @@ a {
 }
 .panel{
     height:100%;
+    display:inline-block;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Corben', Georgia, Times, serif;
