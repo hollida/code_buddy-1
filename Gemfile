@@ -19,6 +19,7 @@ gem 'simple_form'
 gem 'protected_attributes'
 
 gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 
 group :doc do
   gem 'sdoc', require: false
