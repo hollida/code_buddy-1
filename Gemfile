@@ -25,6 +25,8 @@ gem 'omniauth-google-oauth2'
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 
+gem 'sunspot_rails'
+
 group :doc do
   gem 'sdoc', require: false
 end
@@ -37,4 +39,5 @@ end
     
 group :development do
     gem 'sqlite3'
+    gem 'sunspot_solr'
 end
