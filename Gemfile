@@ -27,6 +27,7 @@ gem 'will_paginate-bootstrap'
 
 gem 'sunspot_rails'
 gem 'progress_bar'
+gem 'paperclip'
 
 group :doc do
   gem 'sdoc', require: false

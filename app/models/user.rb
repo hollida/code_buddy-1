@@ -4,8 +4,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   acts_as_messageable
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :status, :interests, :first_name, :last_name, :provider, :uid
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :status, :interests, :first_name, :last_name, :provider, :uid, :avatar, :about, :github
   devise :omniauthable #, :omniauth_providers => [:facebook]
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/assets/blank.png"
+
 
   searchable do
       text :email, :status, :interests, :first_name, :last_name

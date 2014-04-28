@@ -1,2 +1,17 @@
+<img src="<%= @user.avatar %>">
 <h1><%= @user.first_name %></h1>
 <p>Here, there will be a profile photo, github links, user information, and a link to message the user through the built in messaging system.</p>
+<p>
+<%= @user.email %>
+</p>
+<p>
+<%= @user.interests %>
+</p>
+<p>
+<%= @user.about %>
+</p>
+<p><%= link_to 'Send a message', conversations_path %>
+</p>
+<% github = 'http://github.com/' + @user.github %>
+<p><%= link_to 'View Github', github %>
+</p>
