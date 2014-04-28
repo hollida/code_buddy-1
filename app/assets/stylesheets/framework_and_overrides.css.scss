@@ -11,10 +11,12 @@
 // --------------------------------------------------
 
 
+
 //== Colors
 //
 
 //IMPORTANT
+$home-bg:                                   url(/assets/back.png);
 $main-bg:                                   url(/assets/skulls.png);
 $link-color:                                rgba(243, 156, 18,1.0);
 $jumbotron-bg:                              rgba(241, 196, 15,0.5);
@@ -839,6 +841,12 @@ img {
 .navbar-brand {
   font-size: inherit;
   }
+.user-panel{
+    width:100%;
+}
+.contact-form{
+    width:100%;
+}
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
@@ -1079,4 +1087,54 @@ h1, h2, h3, h4, h5, h6 {
 }
 p, div {
     font-family: 'Nobile', Helvetica, Arial, sans-serif;
+}
+
+.home-page{
+    background-image:$home-bg;
+    background-size:100% auto;
+    width:100%;
+    height:100%;
+    background-repeat: no-repeat;
+}
+
+
+
+.path {
+  -webkit-stroke-dasharray: 1000;
+  -webkit-stroke-dashoffset: 1000;
+  -webkit-animation: dash 5s linear infinite;
+  -moz-stroke-dasharray: 1000;
+  -moz-stroke-dashoffset: 1000;
+  -moz-animation: dash 5s linear infinite;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear infinite;
+}
+
+@-moz-keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }

@@ -1,7 +1,7 @@
   <% @users.each do |user| %>
     <% if user.first_name != nil %>
     <div class="user-tile">
-    <div class="panel panel-success">
+    <div class="panel panel-success user-panel">
     <div class="panel-heading">
         <% fullname = user.first_name+" "+user.last_name %>
         <h2>Name: <%= link_to fullname+" (click to view profile)", user %></h2>
@@ -19,3 +19,8 @@
     </div>
     <br>
   <% end %>
+
+
+<div class="center">
+<%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+</div>
