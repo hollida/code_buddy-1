@@ -1,28 +1,39 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the source code for the application up and running and codebuddy.herokuapp.com. The application is called OK Codebuddy and it is like OK Cupid but for people who want to find someone to code with rather than cuddle with
 
-Things you may want to cover:
+The site is built on
 
-* Ruby version
+* Ruby 2.0.0
 
-* System dependencies
+* Rails 4.0
 
-* Configuration
+* SQLite (dev)
 
-* Database creation
+* Postgres (production)
 
-* Database initialization
+Needs
 
-* How to run the test suite
+* Serious front end work
 
-* Services (job queues, cache servers, search engines, etc.)
+Please submit your pull requests!
 
-* Deployment instructions
+* Fork this repo
 
-* ...
+* git pull https://github.com/johnpc/code_buddy.git
 
+* edit the code
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* git push (to your fork)
+
+* create pull request
+
+If you're having trouble getting it running on your machine
+
+* make sure that you have postgres library installed (apt-get install libpq-dev)
+
+* run bundle install
+
+* run rake db:migrate
+
+If it's still not working, message me with your error message and I'm sure we can get it resolved.
