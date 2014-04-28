@@ -40,6 +40,8 @@ This project decidedly does NOT use therubyracer, and instead uses NodeJS for a 
 
 * echo "deb http://ftp.us.debian.org/debian wheezy-backports main" >> /etc/apt/sources.list
 
+* you may need to add the http:// in front of the ftp.us.debian if it doesn't follow when you copy/paste
+
 * apt-get update
 
 * apt-get install nodejs
