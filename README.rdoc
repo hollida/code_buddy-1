@@ -36,4 +36,12 @@ If you're having trouble getting it running on your machine
 
 * run rake db:migrate
 
+This project decidedly does NOT use therubyracer, and instead uses NodeJS for a v8 runtime. If you're having trouble getting it going, and you use debian wheezy, I suggest getting this going from backports
+
+* echo "deb http://ftp.us.debian.org/debian wheezy-backports main" >> /etc/apt/sources.list
+
+* apt-get update
+
+* apt-get install nodejs
+
 If it's still not working, message me with your error message and I'm sure we can get it resolved.
