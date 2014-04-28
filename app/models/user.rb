@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :status, :interests, :first_name, :last_name, :provider, :uid
   devise :omniauthable #, :omniauth_providers => [:facebook]
 
+  searchable do
+      text :email, :status, :interests, :first_name, :last_name
+  end
   
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
