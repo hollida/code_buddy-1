@@ -1,5 +1,5 @@
 = simple_form_for :conversation, url: :conversations do |f|
-  = f.input :recipients
+  = f.input :recipients,  :input_html => { :value => params[:to] }
   = f.input :subject
   = f.input :body
   .form-actions

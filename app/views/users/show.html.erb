@@ -10,7 +10,7 @@
 <p>
 <%= @user.about %>
 </p>
-<p><%= link_to 'Send a message', new_conversation_path %>
+<p><%= link_to 'Send a message', new_conversation_path(:to => @user.email) %>
 </p>
 <% github = 'http://github.com/' + @user.github %>
 <p><%= link_to 'View Github', github %>
