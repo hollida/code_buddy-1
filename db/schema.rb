@@ -70,8 +70,6 @@ ActiveRecord::Schema.define(version: 20140428164224) do
     t.string   "last_name"
     t.string   "interests"
     t.string   "status"
-    t.string   "provider"
-    t.string   "uid"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
