@@ -1,6 +1,18 @@
 == README
 
+To get this, follow these instructions 
+ * git init
+ * git remote add origin https://github.com/johnpc/code_buddy.git
+ * git remote add upstream {your fork url}
+ * code
+ * git add .
+ * git commit -m ""message""
+ * git push upstream 
+ * issue pull request
+
+
 This is the source code for the application up and running and codebuddy.herokuapp.com. The application is called OK Codebuddy and it is like OK Cupid but for people who want to find someone to code with rather than cuddle with
+
 
 The site is built on
 
